@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.crmpovasa'
+    namespace 'com.example.crm5ymas'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.crmpovasa"
+        applicationId "com.example.crm5ymas"
         minSdk 28
         targetSdk 34
         versionCode 1

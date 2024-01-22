@@ -1,16 +1,14 @@
-package com.example.crmpovasa
+package com.example.crm5ymas
 
 import Adapters.AdapterRecyclerClientes
 import PreferencesPackage.CRMPovasaApplication.Companion.preferences
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.Adapter
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast

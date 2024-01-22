@@ -1,11 +1,8 @@
-package com.example.crmpovasa
+package com.example.crm5ymas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.FragmentContainerView
-import data.Cliente
-import com.google.gson.Gson
 
 class ActivityMaps : AppCompatActivity() {
 

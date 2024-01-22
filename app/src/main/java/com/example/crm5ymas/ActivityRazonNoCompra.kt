@@ -1,4 +1,4 @@
-package com.example.crmpovasa
+package com.example.crm5ymas
 
 import PreferencesPackage.CRMPovasaApplication
 import PreferencesPackage.CRMPovasaApplication.Companion.preferences

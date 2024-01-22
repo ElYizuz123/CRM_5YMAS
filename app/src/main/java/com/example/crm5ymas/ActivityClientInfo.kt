@@ -1,4 +1,4 @@
-package com.example.crmpovasa
+package com.example.crm5ymas
 
 import android.content.ClipData
 import android.content.ClipboardManager

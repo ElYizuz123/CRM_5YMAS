@@ -16,17 +16,17 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_cinco_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_cinco_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CRMPovasa"
         tools:targetApi="31">
         <service android:name="data.LocationService" android:foregroundServiceType="location"/>
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.crmpovasa"
+            android:authorities="com.example.crm5ymas"
             android:exported="false"
             android:grantUriPermissions="true">
                 <meta-data

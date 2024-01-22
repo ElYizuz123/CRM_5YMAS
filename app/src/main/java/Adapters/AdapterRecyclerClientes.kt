@@ -2,7 +2,6 @@ package Adapters
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +10,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.crmpovasa.ActivityClientInfo
-import com.example.crmpovasa.ActivityPrin
-import com.example.crmpovasa.R
+import com.example.crm5ymas.ActivityClientInfo
+import com.example.crm5ymas.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import data.Cliente
 

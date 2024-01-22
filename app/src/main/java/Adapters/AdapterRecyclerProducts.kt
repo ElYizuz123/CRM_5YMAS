@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.crmpovasa.R
+import com.example.crm5ymas.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import data.Cliente
 import data.ProductoWQ
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols

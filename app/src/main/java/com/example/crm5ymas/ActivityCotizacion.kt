@@ -1,4 +1,4 @@
-package com.example.crmpovasa
+package com.example.crm5ymas
 
 import Adapters.AdapterRecyclerProducts
 import PreferencesPackage.CRMPovasaApplication
@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.Color
 import android.graphics.pdf.PdfRenderer
 import android.net.Uri
 import android.os.Bundle
@@ -40,7 +39,6 @@ import com.itextpdf.io.image.ImageDataFactory
 import com.itextpdf.kernel.colors.DeviceRgb
 import com.itextpdf.kernel.font.PdfFontFactory
 import com.itextpdf.kernel.geom.PageSize
-import com.itextpdf.kernel.geom.Rectangle
 import com.itextpdf.kernel.pdf.PdfDocument
 import com.itextpdf.kernel.pdf.PdfWriter
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas
@@ -50,8 +48,6 @@ import com.itextpdf.layout.element.Paragraph
 import data.ProductClass
 import data.Producto
 import data.ProductoWQ
-import kotlinx.coroutines.newFixedThreadPoolContext
-import org.apache.commons.io.IOUtils.writer
 import org.apache.poi.ss.usermodel.BorderStyle
 import org.apache.poi.ss.usermodel.Cell
 import org.apache.poi.ss.usermodel.CellType
@@ -319,7 +315,6 @@ class ActivityCotizacion : AppCompatActivity(), AdapterRecyclerProducts.OnItemCl
                                 precio=cell.numericCellValue
                             }
                         }
-                        //PRUEBA
                         i.precio=precio
                     }
                 }

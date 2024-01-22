@@ -1,4 +1,4 @@
-package com.example.crmpovasa
+package com.example.crm5ymas
 
 import PreferencesPackage.CRMPovasaApplication.Companion.preferences
 import android.Manifest
@@ -9,11 +9,9 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.pdf.PdfRenderer
-import android.media.Image
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -26,7 +24,6 @@ import android.text.InputFilter
 import android.text.InputType
 import android.text.Spanned
 import android.text.TextWatcher
-import android.util.TypedValue
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -35,8 +32,6 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.activity.result.ActivityResultCallback
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat

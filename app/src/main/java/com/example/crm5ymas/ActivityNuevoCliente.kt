@@ -1,7 +1,6 @@
-package com.example.crmpovasa
+package com.example.crm5ymas
 
 import Adapters.AdapterNuevoCliente
-import PreferencesPackage.CRMPovasaApplication
 import PreferencesPackage.CRMPovasaApplication.Companion.preferences
 import android.annotation.SuppressLint
 import android.content.ClipData
@@ -37,7 +36,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.apache.poi.ss.usermodel.BorderStyle
 import org.apache.poi.ss.usermodel.Cell
-import org.apache.poi.ss.usermodel.CellType
 import org.apache.poi.ss.usermodel.FillPatternType
 import org.apache.poi.ss.usermodel.HorizontalAlignment
 import org.apache.poi.ss.usermodel.IndexedColors
