@@ -372,7 +372,7 @@ class ActivityCotizacion : AppCompatActivity(), AdapterRecyclerProducts.OnItemCl
             image2.scaleAbsolute(160f, 60f)
             image2.setFixedPosition(650f, 1060f)
             document.add(image2)
-            val comer= Paragraph("COMERCIALIZADORA LUIGUI")
+            val comer= Paragraph("COMERCIALIZADORA 5 Y MAS")
             comer.setFontColor(DeviceRgb(0,0,0))
             comer.setFontSize(22f)
             val font = PdfFontFactory.createFont(StandardFonts.HELVETICA)
