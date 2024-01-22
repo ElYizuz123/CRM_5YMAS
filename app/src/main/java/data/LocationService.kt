@@ -126,7 +126,7 @@ class LocationService: Service() {
         val notification = NotificationCompat.Builder(this, "location")
             .setContentTitle("Realizando seguimiento...")
             .setContentText("Distancia: 0 km")
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.mipmap.ic_cinco_launcher)
             .setOngoing(true)
 
 
