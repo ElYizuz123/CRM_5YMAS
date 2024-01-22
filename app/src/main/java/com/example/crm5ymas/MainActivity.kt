@@ -77,6 +77,7 @@ class MainActivity : AppCompatActivity() {
     val ruta3= mutableListOf("Queretaro", "El Pueblito", "Tequisquiapan", "Acámbaro")
     val ruta4= mutableListOf("Uruapan", "Nueva Italia", "Apatzingán")
     val ruta5= mutableListOf("Moroleón", "Salvatierra", "Celaya", "Cortazar", "Salamanca", "Irapuato", "Silao", "León")
+    val ruta6= mutableListOf("Tenencia Morelos","Uruapilla","Santiago Undameo","Tiripetio")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -310,6 +311,10 @@ class MainActivity : AppCompatActivity() {
                 if(rutaCiudadHidalgo.exists()){
                     listaRutas.add("Ciudad Hidalgo")
                 }
+                val rutaMichoacan = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta MICHOACAN.xlsx").toString())
+                if(rutaMichoacan.exists()){
+                    listaRutas.add("Michoacán")
+                }
                 absoluteFile.clear()
                 for(i in listaRutas){
                     absoluteFile.add(i)
@@ -390,6 +395,18 @@ class MainActivity : AppCompatActivity() {
                     absoluteRute.add(i)
                 }
             }
+            "Michoacán" ->{
+                preferences.savePath(Environment.getExternalStoragePublicDirectory(
+                    Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta MICHOACAN.xlsx").toString())
+                adaptador.clear()
+                lista=ruta6.sorted().toMutableList()
+                adaptador.addAll(lista)
+                adaptador.notifyDataSetChanged()
+                absoluteRute.clear()
+                for(i in ruta1){
+                    absoluteRute.add(i)
+                }
+            }
             else ->{
                 preferences.savePath("")
                 absoluteRute.clear()
@@ -427,6 +444,10 @@ class MainActivity : AppCompatActivity() {
             "Irapuato"->{a="Irapuato"}
             "Silao"->{a="Silao"}
             "León"->{a="Leon"}
+            "Tenencia Morelos"->{a="TENENCIA MORELOS"}
+            "Uruapilla"->{a="URUAPILLA"}
+            "Santiago Undameo"->{a="SANTIAGO UNDAMEO"}
+            "Tiripetio"->{a="TIRIPETIO"}
             else ->{a="Hoja1"}
         }
         return a
