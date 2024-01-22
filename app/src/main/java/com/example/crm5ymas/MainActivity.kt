@@ -271,11 +271,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun verificarCarpeta() {
         try{
-            val folderExist = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM").toString())
+            val folderExist = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M").toString())
             if (!folderExist.exists()){
                 try{
                     folderExist.mkdirs()
-                    Toast.makeText(this, "Carpeta de rutas creada: RutasCRM en Descargas", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Carpeta de rutas creada: Rutas5&M en Descargas", Toast.LENGTH_LONG).show()
                 }catch (ex: Exception){
                     ex.printStackTrace()
                 }
@@ -288,25 +288,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun rutasExistentes() {
         try{
-            if(File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM").toString()).listFiles().isNotEmpty()){
+            if(File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M").toString()).listFiles().isNotEmpty()){
                 listaRutas.clear()
-                val rutaQuer = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta QUERETARO.xlsx").toString())
+                val rutaQuer = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta QUERETARO.xlsx").toString())
                 if(rutaQuer.exists()){
                     listaRutas.add("Querétaro")
                 }
-                val rutaZamor = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta ZAMORA.xlsx").toString())
+                val rutaZamor = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta ZAMORA.xlsx").toString())
                 if(rutaZamor.exists()){
                     listaRutas.add("Zamora")
                 }
-                val rutaUruapan = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta URUAPAN.xlsx").toString())
+                val rutaUruapan = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta URUAPAN.xlsx").toString())
                 if(rutaUruapan.exists()){
                     listaRutas.add("Uruapan")
                 }
-                val rutaGuajajuato = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta GUANAJUATO.xlsx").toString())
+                val rutaGuajajuato = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta GUANAJUATO.xlsx").toString())
                 if(rutaGuajajuato.exists()){
                     listaRutas.add("Guanajuato")
                 }
-                val rutaCiudadHidalgo = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta CIUDAD HIDALGO.xlsx").toString())
+                val rutaCiudadHidalgo = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta CIUDAD HIDALGO.xlsx").toString())
                 if(rutaCiudadHidalgo.exists()){
                     listaRutas.add("Ciudad Hidalgo")
                 }
@@ -328,7 +328,7 @@ class MainActivity : AppCompatActivity() {
         when(spinnerRutasAbs.selectedItem){
             "Querétaro" ->{
                 preferences.savePath(Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta QUERETARO.xlsx").toString())
+                    Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta QUERETARO.xlsx").toString())
                 lista = ruta3.sorted().toMutableList()
                 adaptador.clear()
                 lista=ruta3.sorted().toMutableList()
@@ -341,7 +341,7 @@ class MainActivity : AppCompatActivity() {
             }
             "Zamora" ->{
                 preferences.savePath(Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta ZAMORA.xlsx").toString())
+                    Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta ZAMORA.xlsx").toString())
                 lista = ruta2.sorted().toMutableList()
                 adaptador.clear()
                 lista=ruta2.sorted().toMutableList()
@@ -354,7 +354,7 @@ class MainActivity : AppCompatActivity() {
             }
             "Uruapan" ->{
                 preferences.savePath(Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta URUAPAN.xlsx").toString())
+                    Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta URUAPAN.xlsx").toString())
                 lista = ruta4.sorted().toMutableList()
                 adaptador.clear()
                 lista=ruta4.sorted().toMutableList()
@@ -367,7 +367,7 @@ class MainActivity : AppCompatActivity() {
             }
             "Guanajuato" ->{
                 preferences.savePath(Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta GUANAJUATO.xlsx").toString())
+                    Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta GUANAJUATO.xlsx").toString())
                 lista = ruta5.sorted().toMutableList()
                 adaptador.clear()
                 lista=ruta5.sorted().toMutableList()
@@ -380,7 +380,7 @@ class MainActivity : AppCompatActivity() {
             }
             "Ciudad Hidalgo" ->{
                 preferences.savePath(Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Ruta CIUDAD HIDALGO.xlsx").toString())
+                    Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/Ruta CIUDAD HIDALGO.xlsx").toString())
                 adaptador.clear()
                 lista=ruta1.sorted().toMutableList()
                 adaptador.addAll(lista)

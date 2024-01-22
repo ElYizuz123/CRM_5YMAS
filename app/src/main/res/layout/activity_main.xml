@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="CL CRM"
+        android:text="CRM 5 Y MAS"
         android:textColor="#104902"
         android:textSize="34sp"
         android:textStyle="bold"

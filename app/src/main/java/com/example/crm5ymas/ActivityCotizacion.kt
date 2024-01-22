@@ -272,11 +272,11 @@ class ActivityCotizacion : AppCompatActivity(), AdapterRecyclerProducts.OnItemCl
 
     private fun readExcelPrices() {
         try {
-            val listaPrecios = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Lista de precios.xlsx").toString())
+            val listaPrecios = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/LISTA DE PRECIOS 5 Y MAS.xlsx").toString())
             if(listaPrecios.exists()){
                 val workbook : Workbook = WorkbookFactory.create(
                     FileInputStream(
-                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/RutasCRM/Lista de precios.xlsx"))
+                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/Rutas5&M/LISTA DE PRECIOS 5 Y MAS.xlsx"))
                 )
                 val sheet: Sheet = workbook.getSheet("Lista")
                 val rowNumber = 2
