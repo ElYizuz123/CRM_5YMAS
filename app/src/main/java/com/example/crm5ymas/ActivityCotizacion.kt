@@ -503,44 +503,22 @@ class ActivityCotizacion : AppCompatActivity(), AdapterRecyclerProducts.OnItemCl
                 document.add(sign2)
                 lateinit var calcPrec: Paragraph
                 var texto=""
-                if(listProds[i].peso==25){
-                    texto = roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad*listProds[i].peso).toString()
-                    if(texto.split(".")[1].length<2){
-                        if(!formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad*listProds[i].peso)).contains(".")){
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad*listProds[i].peso))+".00")
-                        }
-                        else{
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad*listProds[i].peso))+"0")
-                        }
+                texto = roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad).toString()
+                if(texto.split(".")[1].length<2){
+                    if(!formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad)).contains(".")){
+                        calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad))+".00")
                     }
                     else{
-                        if(!formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad*listProds[i].peso)).contains(".")){
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad*listProds[i].peso))+".00")
-                        }
-                        else{
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad*listProds[i].peso)))
-                        }
+                        calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad))+"0")
                     }
                 }
                 else{
-                    texto = roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad).toString()
-                    if(texto.split(".")[1].length<2){
-                        if(!formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad)).contains(".")){
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad))+".00")
-                        }
-                        else{
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad))+"0")
-                        }
+                    if(!formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad)).contains(".")){
+                        calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad))+".00")
                     }
                     else{
-                        if(!formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad)).contains(".")){
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad))+".00")
-                        }
-                        else{
-                            calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad)))
-                        }
+                        calcPrec=Paragraph(formatNumber(roundToTwoDecimals(listProds[i].precio*listProds[i].cantidad)))
                     }
-
                 }
                 calcPrec.setFontColor(DeviceRgb(0,0,0))
                 calcPrec.setFontSize(14f)
