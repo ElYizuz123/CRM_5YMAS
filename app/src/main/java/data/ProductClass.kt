@@ -150,7 +150,7 @@ class ProductClass {
             Producto(142, "", "Papel Aluminio ALU-MAG 100 ECO", 0, 383.99, 60),
             Producto(143, "", "Papel Aluminio ALU-MAG 400.1", 0, 383.99, 61),
             Producto(144, "", "Papel Aluminio ALU-MAG 1Kg", 0, 383.99, 62),
-            Producto(145, "", "Papel Aluminio ALU-MAG 1Kg", 0, 383.99, 63),
+            Producto(145, "", "Papel Aluminio ALU-MAG 2Kg", 0, 383.99, 63),
             Producto(137, "", "Otros", 0, 0.0, -1)
         )
         return products
