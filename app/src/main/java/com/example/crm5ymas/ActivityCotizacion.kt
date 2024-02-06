@@ -94,6 +94,7 @@ class ActivityCotizacion : AppCompatActivity(), AdapterRecyclerProducts.OnItemCl
         ruta=intent.getStringExtra("ruta")!!
         excelSheet=intent.getStringExtra("excelSheet")!!
         clientId=intent.getIntExtra("id", -1)
+        val clientNombre = intent.getStringExtra("nombre")
         progressBar=findViewById(R.id.progressBarCotizador)
         val editTextFiltro = findViewById<EditText>(R.id.editTextTextFiltroProducto)
         val editTextCantidad = findViewById<EditText>(R.id.editTextNumberCantidadProductos)
@@ -105,6 +106,9 @@ class ActivityCotizacion : AppCompatActivity(), AdapterRecyclerProducts.OnItemCl
         val arrayDesc = ArrayList<String>()
         val arrayProds = ArrayList<ProductoWQ>()
         compListProducts = ProductClass().getProducts()
+        if(clientNombre!=null){
+            editTextCliente.setText(clientNombre+" ("+ruta+")")
+        }
         readExcelPrices()
         for(i in compListProducts){
             arrayProds.add(ProductoWQ(i.id, i.sku, i.desc, i.peso, i.precio, 0))
@@ -673,6 +677,11 @@ class ActivityCotizacion : AppCompatActivity(), AdapterRecyclerProducts.OnItemCl
         return sb.toString()
     }
     fun convertirPDFImagen(byteArray: ByteArray):ByteArray?{
+        val path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+        val file = File.createTempFile(generateHexKey(), ".pdf", path)
+        val os = FileOutputStream(file)
+        os.write(byteArray)
+        os.close()
         val tempFile = File.createTempFile("temp", ".pdf")
         tempFile.deleteOnExit()
         val fileOutputStream = FileOutputStream(tempFile)
