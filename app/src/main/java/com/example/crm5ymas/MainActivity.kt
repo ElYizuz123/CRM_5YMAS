@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     val ruta3= mutableListOf("Queretaro", "El Pueblito", "Tequisquiapan", "Acámbaro")
     val ruta4= mutableListOf("Uruapan", "Nueva Italia", "Apatzingán")
     val ruta5= mutableListOf("Moroleón", "Salvatierra", "Celaya", "Cortazar", "Salamanca", "Irapuato", "Silao", "León")
-    val ruta6= mutableListOf("Tenencia Morelos","Uruapilla","Santiago Undameo","Tiripetio")
+    val ruta6= mutableListOf("Tenencia Morelos","Uruapilla","Santiago Undameo","Tiripetio", "Morelia", "Tarímbaro")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -448,6 +448,8 @@ class MainActivity : AppCompatActivity() {
             "Uruapilla"->{a="URUAPILLA"}
             "Santiago Undameo"->{a="SANTIAGO UNDAMEO"}
             "Tiripetio"->{a="TIRIPETIO"}
+            "Morelia" ->{a="MORELIA"}
+            "Tarímbaro"->{a="TARIMBARO"}
             else ->{a="Hoja1"}
         }
         return a
