@@ -105,7 +105,11 @@ class ActivityVerCliente : AppCompatActivity() {
                     fusedLocationProviderClient.removeLocationUpdates(locationCallback)
                     orderedClientList.clear()
                     for(i in orderedAbsoluteList){
-                        if(i.nombre.lowercase().trim().contains(editTextFiltroClientes.text.toString().lowercase().trim())){
+                        val search= i.nombre.lowercase().trim()+i.id+i.latitud+i.longitud+i.lista+i.comentarios.lowercase().trim()+
+                                i.consumo.lowercase().trim()+i.contacto.lowercase().trim()+i.mapsLink.lowercase().trim()+
+                                i.marcas.lowercase().trim()+i.periodoCons.lowercase().trim()+i.telefono.lowercase().trim()+
+                                i.productos.lowercase().trim()+i.seguimiento.lowercase().trim()+i.ubicacion.lowercase().trim()
+                        if(search.contains(editTextFiltroClientes.text.toString().lowercase().trim())){
                             orderedClientList.add(i)
                         }
                     }

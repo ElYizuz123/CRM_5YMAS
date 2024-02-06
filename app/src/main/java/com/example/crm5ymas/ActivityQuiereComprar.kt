@@ -41,6 +41,7 @@ class ActivityQuiereComprar : AppCompatActivity() {
             segue.putExtra("lista", clientList)
             segue.putExtra("ruta", ruta)
             segue.putExtra("excelSheet", excelSheet)
+            segue.putExtra("nombre", clientNombre)
             startActivity(segue)
         }
     }
